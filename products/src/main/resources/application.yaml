@@ -6,8 +6,9 @@ spring:
     name: product
   datasource:
     username: root
-    url: jdbc:mysql://localhost:3307/microservicesTp1products?createDatabaseIfNotExist=true
-    password: root
+    url: jdbc:mysql://localhost:3306/microservices_products?createDatabaseIfNotExist=true
+    password: 
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: create-drop
@@ -22,8 +23,10 @@ spring:
           url: http://localhost:8088
   cloud:
     config:
-      uri: http://localhost:8888
-      profile:
+      enabled: false
+      import-check:
+        enabled: false
+      
 eureka:
   client:
     serviceUrl:
