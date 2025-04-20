@@ -1,0 +1,18 @@
+server:
+  port: 8888
+
+
+spring:
+  application:
+    name: confServer
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ZARAYACH/microservicesTp.git
+          clone-on-start: true
+          default-label: master
+  security:
+    user:
+      password: admin
+      name: admin
