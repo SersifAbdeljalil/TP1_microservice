@@ -9,7 +9,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/ZARAYACH/microservicesTp.git
+          uri: https://github.com/SersifAbdeljalil/TP1_microservice.git
           clone-on-start: true
           default-label: master
   security:
