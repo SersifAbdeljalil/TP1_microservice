@@ -21,9 +21,6 @@ public class CustomerService{
                 .build();
 
         return customerRepository.saveAndFlush(customer);
-        // todo: check if email valid
-        // todo: check if email not taken
-
     }
 
     public List<Customer> getAllCustomers() {
@@ -31,7 +28,10 @@ public class CustomerService{
     }
 
     public Optional<Customer> getCustomerById(Integer id) {
-        return customerRepository.findById(id);
+        System.out.println("🧪 [SERVICE] Recherche du client avec ID : " + id);
+        Optional<Customer> customer = customerRepository.findById(id);
+        System.out.println("Résultat → " + customer);
+        return customer;
     }
 
     public Customer updateCustomer(Integer id, CustomerRequest request) {

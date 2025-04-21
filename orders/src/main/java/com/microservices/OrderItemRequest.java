@@ -1,4 +1,6 @@
 package com.microservices;
 
-public record OrderItemRequest(Integer productId, Double quantity) {
-}
+public record OrderItemRequest(
+    Integer productId,
+    Double quantity
+) {}

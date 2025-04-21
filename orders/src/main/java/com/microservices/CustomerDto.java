@@ -1,7 +1,8 @@
 package com.microservices;
 
-public record CustomerDto(Long id,
-                          String firstName,
-                          String lastName,
-                          String email) {
-}
+public record CustomerDto(
+    Integer id,
+    String firstName,
+    String lastName,
+    String email
+) {}

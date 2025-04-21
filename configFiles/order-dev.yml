@@ -1,13 +1,14 @@
 server:
-  port: 8089
+  port: 8083
 
 spring:
   application:
     name: order
   datasource:
     username: root
-    url: jdbc:mysql://localhost:3307/microservicesTp1Orders?createDatabaseIfNotExist=true
-    password: root
+    url: jdbc:mysql://localhost:3306/microservices_Orders?createDatabaseIfNotExist=true
+    password: 
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: create-drop
@@ -19,11 +20,12 @@ spring:
   boot:
     admin:
       client:
-        url : http://localhost:8088
+        url: http://localhost:8088
   cloud:
     config:
-      uri: http://localhost:8888
       enabled: false
+      import-check:
+        enabled: false
 
 eureka:
   client:
@@ -31,7 +33,6 @@ eureka:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
   instance:
     preferIpAddress: true
-
 
 management:
   endpoints:
